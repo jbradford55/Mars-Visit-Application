@@ -1,0 +1,129 @@
+/* General Styles */
+body {
+  background-color: #121212;
+  background-image: url('/mars_.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #e0e0e0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Form Container */
+form {
+  background-color: rgba(30, 30, 30, 0.9); /* Slightly transparent black */
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 500px;
+  flex-direction: column;
+  display: flex;
+
+  align-items: center;
+  gap: 1rem; /* Spacing between elements */
+}
+
+/* Heading */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Labels */
+label {
+  font-size: 1rem;
+  color: #b3b3b3;
+  align-self: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 0.5rem; /* Reduced for consistency */
+  border-radius: 4px;
+  border: none;
+  background-color: #333333;
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  outline: none;
+  transition: background-color 0.2s ease;
+}
+
+
+
+
+input::placeholder,
+textarea::placeholder {
+  color: #888888;
+}
+
+/* Hover/Focus Effects */
+input:focus,
+select:focus,
+textarea:focus {
+  background-color: #444444;
+}
+
+/* Error Messages */
+.error {
+  color: #ff6b6b;
+  font-size: 0.9rem;
+  margin: 0.2rem 0 0.5rem;
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem; /* Space between the buttons */
+}
+
+/* Button */
+button {
+  background-color: #ff6b6b;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.7rem 1.5rem; /* Adjusted padding for a smaller button */
+  font-size: 1rem; /* Adjusted font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: auto; /* Makes the button size based on content */
+}
+
+button:hover {
+  background-color: #ff4c4c;
+}
+
+/* Make Form Responsive */
+@media (max-width: 500px) {
+  form {
+    padding: 2rem;
+    max-width: 100%;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+}
