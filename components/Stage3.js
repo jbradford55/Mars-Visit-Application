@@ -23,7 +23,7 @@ const Stage3 = () => {
         placeholder="Full Name"
       />
       <p>{errors.emergencyContactName?.message}</p>
-ß
+
       <label htmlFor="emergencyContactPhone">Emergency Contact Phone Number</label>
       <input
         type="tel"
