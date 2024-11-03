@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Mars Visit Application
+This is a Next.js project that allows users to apply for a visit to Mars! Users can enter their personal details, travel preferences, and health information. Once submitted, the application sends a confirmation email.
 
-## Getting Started
+Live Demo
+Check out the live version of the site here: Live Mars Visit Application
 
-First, run the development server:
+Getting Started
+To run this project locally, follow these steps:
 
-```bash
+Clone the repository:
+
+bash
+Copy code
+git clone https://github.com/yourusername/your-repo-name.git
+cd your-repo-name
+Install dependencies:
+
+bash
+Copy code
+npm install
+# or
+yarn install
+Set up environment variables:
+
+Create a .env.local file at the root of the project and add the following:
+
+plaintext
+Copy code
+EMAIL_USER=<your_email>
+EMAIL_PASSWORD=<your_email_password>
+Run the development server:
+
+bash
+Copy code
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open http://localhost:3000 with your browser to view the application.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Folder Structure
+/components - Contains reusable components such as form stages.
+/pages - Next.js pages, including the main form and API routes.
+/api - API routes for handling form submissions and sending confirmation emails.
+Technologies Used
+Next.js - The React framework for building server-rendered applications.
+Nodemailer - Used for sending confirmation emails.
+React Hook Form - For form validation and management.
+Learn More
+To learn more about Next.js, check out:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Next.js Documentation - Comprehensive documentation for Next.js.
+Next.js GitHub repository
+Deploy on Vercel
+The easiest way to deploy this Next.js app is on Vercel. Check out the Next.js deployment documentation for more details.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
