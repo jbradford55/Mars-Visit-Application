@@ -10,7 +10,7 @@ export default async function handler(req, res) {
         service: "gmail",
         auth: {
           user: "letsgonets03@gmail.com", // Replace with your Gmail address
-          pass: "lgmp tkce ohlr ugnk",    // Replace with your generated App Password
+          pass: process.env.EMAIL_PASSWORD,    // Replace with your generated App Password
         },
       });
 
@@ -36,15 +36,15 @@ export default async function handler(req, res) {
         .map(([key, value]) => `${fieldNames[key] || key}: ${value}`)
         .join('\n');
 
-      // Personalized first sentence with the applicant's name
-      const firstSentence = `Hi ${formData.fullName},\n\nThank you for applying to visit Mars! We will contact you as soon as Mr. Elon Musk has an answer for you.`;
+      // Alien-themed greeting and personalized message
+      const firstSentence = `Hi ${formData.fullName},\n\nThank you for transmitting your interest in a visit to Planet Mars! The Galactic Council and Mr. Elon Musk will review your application carefully, and we will contact you soon with an intergalactic decision.\n\nHere’s a summary of your Martian visa application (in Earthling format, of course):`;
 
-      // Compose email
+      // Compose email with extraterrestrial flair
       const mailOptions = {
         from: "letsgonets03@gmail.com", // Replace with your Gmail address
         to: email,
         subject: "Confirmation of Your Mars Visit Application",
-        text: `${firstSentence}\n\nHere’s a summary of your information:\n\n${formattedData}\n\nBest,\nMars Recruiting Team`,
+        text: `${firstSentence}\n\n${formattedData}\n\nP.S. If you encounter any aliens, remember to greet them with the universal signal: 🖖\n\nBest stardust wishes,\nMars Recruiting Team`,
       };
 
       // Send email

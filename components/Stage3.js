@@ -11,7 +11,7 @@ const Stage3 = () => {
       <select {...register("healthDeclaration", { required: "Health declaration is required" })}>
         <option value="">Choose an Option</option>
         <option value="Good">Yes</option>
-        <option value="Good">No</option>
+        <option value="Need Assistance">No</option>
 
       </select>
       <p>{errors.healthDeclaration?.message}</p>

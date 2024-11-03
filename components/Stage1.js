@@ -31,13 +31,15 @@ const Stage1 = () => {
       />
       <p className="error">{errors.nationality?.message}</p>
 
-
       <label htmlFor="email">Email</label>
       <input 
         type="email"
         {...register("email", { 
           required: "Email is required", 
-          pattern: { value: /^\S+@\S+$/i, message: "Invalid email format" } 
+          pattern: { 
+            value: /^\S+@\S+\.\S+$/, 
+            message: "Invalid email format" 
+          } 
         })} 
         placeholder="Email" 
       />
@@ -49,8 +51,8 @@ const Stage1 = () => {
         {...register("phone", { 
           required: "Phone is required", 
           pattern: { 
-            value: /^(\d{3}[-\s]?){2}\d{4}$/, 
-            message: "Invalid phone number format" 
+            value: /^\d{3}-\d{3}-\d{4}$/, 
+            message: "Format must be 000-000-0000" 
           } 
         })} 
         placeholder="Phone Number" 
