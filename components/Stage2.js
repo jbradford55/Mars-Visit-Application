@@ -8,11 +8,11 @@ const Stage2 = () => {
       <h2>Travel Preferences</h2>
 
       <label htmlFor="departureDate">Departure Date</label>
-      <input type="date" {...register("departureDate", { required: "Departure Date is required" })} type="date" placeholder="Departure Date" />
+      <input {...register("departureDate", { required: "Departure Date is required" })} type="date" placeholder="Departure Date" />
       <p>{errors.departureDate?.message}</p>
 
       <label htmlFor="returnDate">Return Date</label>
-      <input type = "date"{...register("returnDate", { required: "Return Date is required" })} type="date" placeholder="Return Date" />
+      <input {...register("returnDate", { required: "Return Date is required" })} type="date" placeholder="Return Date" />
       <p>{errors.returnDate?.message}</p>
 
       <label htmlFor="accommodation">Accommodation Preference</label>
